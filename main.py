@@ -3,6 +3,7 @@ from food import Food
 from score import Score
 import time
 from snake import Snake
+import winsound
 
 screen = Screen()
 screen.setup(600, 600)
@@ -36,12 +37,14 @@ while game_continue:
         game_continue = False
         score.reset()
         score.game_over()
+        winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
 
     for segments in snake.segment[1:]:
         if snake.head.distance(segments) < 10:
             game_continue = False
             score.reset()
             score.game_over()
+            winsound.PlaySound("SystemExit", winsound.SND_ALIAS)
 
 
 screen.exitonclick()
