@@ -2,5 +2,5 @@
 
 I love to play snake game since childhood
 
-Now I play with my coding
+Created by using Turtle module and inherit turtle class
 
